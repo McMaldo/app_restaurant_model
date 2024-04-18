@@ -40,7 +40,7 @@ header{
         width: 100%;
         background-color:#f1f1f1;
         display: flex;
-        padding: 15px;
+        padding: 35px;
         justify-content: space-between;
         gap: 20px;
         overflow: hidden;
@@ -54,16 +54,32 @@ header{
             justify-content: center;
             align-items: center;
             font-size: 1,2em;
+            color:rgb(119, 119, 119);
+            /*span{
+                height: 70px;
+
+            }*/
+        }
+        a:link{
+            color:red;
+        }
+        a:visited{
+            color:blueviolet;
+        }
+        a:hover{
+            color: black;
+        }
+        a:active{
+            text-shadow: 0px 0px 10px black;
         }
         ::-webkit-scrollbar{
-            height: 5px;
+            height: 0px;
         }
         ::-webkit-scrollbar-track{
             background-color: white;
         }
         ::-webkit-scrollbar-thumb{
             background-color: aquamarine;
-            border-radius: 50%;
         }
         ::-webkit-scrollbar-thumb:hover{
             background-color: black;
@@ -115,11 +131,72 @@ header{
 main{
     height: 40%;
     width: 100%;
-    & .productos{
+    .productos{
         height: 600px auto;
-        width: 50%;
-        & article{
-            background-color:blue;
+        width: 100%;
+        padding: 5%;
+        color:#1f1f1f;
+        div.text{
+            height: 30px;
+            color:rgb(119, 119, 119);
+        }
+        .flex{
+            display: flex;
+        }
+        article{
+            height: 140px;
+            width: 100%;
+            border: solid 1px black;
+            background-image: url(../img/chazaresto.png);
+            background-position: center;
+            background-size: cover;
+            box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.300);
+            border-radius: 10px 0 0 10px;
+            div.img{
+                height: 100%;
+                width: 40%;
+                position: relative;
+                padding: 10px;
+                div.distancia{
+                    position: absolute;
+                    right:9px;
+                    color: rgb(167, 167, 167);
+                }
+            }
+            div.descripcion{
+                height: 100%;
+                width: 60%;
+                background-color: #f1f1f1;
+                border-radius: 0 0 0 15px;
+                padding: 15px;
+                position:relative;
+                div{
+                    margin-bottom: 5px;
+                }
+                div.nombre{
+                    font-size: 100%;
+                }
+                div.datos{
+                    font-size: 80%;
+                    color: rgb(56, 56, 56);
+                }
+                div.valoracion{
+                    border: solid 1px #1f1f1f;
+                }
+                div.puntaje{
+                    position: absolute;
+                    height:30px;
+                    width: 30px;
+                    top: -5px;
+                    right: -5px;
+                    background-color: rgb(100, 200, 166);
+                    border-radius: 10px 0 10px 0;
+                    display: grid;
+                    place-items: center;
+                    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.300);
+                    color:white;
+                }
+            }
         }
     }
 }
