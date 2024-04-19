@@ -101,7 +101,7 @@ header{
     .icono{
         height: 100%;
         width: 40px;
-        background-color:aquamarine;
+        background-color:rgb(19, 209, 146);
         display: grid;
         place-items: center;
         i{
@@ -129,26 +129,24 @@ header{
     }
 }
 main{
-    height: 40%;
-    width: 100%;
-    .productos{
+    padding: 20px;
+    section.productos{
         height: 600px auto;
         width: 100%;
-        padding: 5%;
         color:#1f1f1f;
+        gap:20px;
         div.text{
             height: 30px;
-            color:rgb(119, 119, 119);
+            color:rgb(122, 122, 122);
         }
         .flex{
             display: flex;
         }
-        article{
-            height: 140px;
+        article.restaurantes{
+            height: 130px;
             width: 100%;
-            border: solid 1px black;
             background-image: url(../img/chazaresto.png);
-            background-position: center;
+            background-position:left;
             background-size: cover;
             box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.300);
             border-radius: 10px 0 0 10px;
@@ -160,7 +158,7 @@ main{
                 div.distancia{
                     position: absolute;
                     right:9px;
-                    color: rgb(167, 167, 167);
+                    color: rgb(214, 214, 214);
                 }
             }
             div.descripcion{
@@ -170,18 +168,32 @@ main{
                 border-radius: 0 0 0 15px;
                 padding: 15px;
                 position:relative;
+                color: rgb(167, 167, 167);
                 div{
                     margin-bottom: 5px;
                 }
                 div.nombre{
                     font-size: 100%;
+                    margin-bottom: 10px;
                 }
                 div.datos{
                     font-size: 80%;
-                    color: rgb(56, 56, 56);
+                    margin-bottom: 15px;
                 }
                 div.valoracion{
                     border: solid 1px #1f1f1f;
+                    div.estrellas{
+                        font-size:12px;
+                        margin-right: auto;
+                    }
+                    div.costo{
+                        i{
+                            font-size:15px;
+                        }
+                    }
+                    .selected{
+                        color: rgb(19, 209, 146);
+                    }
                 }
                 div.puntaje{
                     position: absolute;
@@ -189,12 +201,13 @@ main{
                     width: 30px;
                     top: -5px;
                     right: -5px;
-                    background-color: rgb(100, 200, 166);
+                    background-color: rgb(19, 209, 146);
                     border-radius: 10px 0 10px 0;
                     display: grid;
                     place-items: center;
                     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.300);
                     color:white;
+                    font-size: 12px;
                 }
             }
         }
