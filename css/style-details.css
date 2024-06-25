@@ -64,6 +64,7 @@ main.details{
 }
 main.menu{
   padding:0;
+  position:relative;
   section{
     width:100%;
     color:black;
@@ -72,21 +73,26 @@ main.menu{
     height:60px;
     box-shadow: 5px 10px 50px 0px rgba(0, 0, 0, 0.1);
     position:sticky;
+    background-color:rgba(255, 255, 255, 0.5);
+    backdrop-filter:blur(10px);
+    z-index:10;
+    top:0;
     .icons{
       position:absolute;
       left:15px;
     }
     a:hover{
       background-color:var(--morfiBlackLight);
-      border-radius: 50%;
+      border-radius:50%;
       box-shadow:0 0 4px 4px var(--morfiBlackLight);
     }
   }
-  section.options{
+  #options{
     padding:5% 5% 75px 5%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    z-index:1;
     gap:20px;
     .card{
       height:100px;

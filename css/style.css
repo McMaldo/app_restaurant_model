@@ -160,16 +160,25 @@ main{
       min-height: 130px;
       width: calc(50% - 5px);
       min-width: 350px;
-      background-image: url(../img/chazaresto.png);
+      /* background-image: url(../img/chazaresto.png);
       background-position:left;
-      background-size: cover;
+      background-size: cover; */
       box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.300);
       border-radius: 10px 0 0 10px;
       div.img{
+        border-radius:inherit;
         height: 100%;
         width: 40%;
         position: relative;
         padding: 10px;
+        object-fit:contain;
+        overflow: hidden;
+        img{
+          position:absolute;
+          left:0;
+          top:0;
+          height:100%;
+        }
         div.distancia{
           position: absolute;
           right:9px;
