@@ -1,3 +1,6 @@
+let guardar=(id)=>{
+  localStorage.setItem("resto",id);
+}
 //conecto con el archivo json
 //fetch('UBICACION - puede ser local o remoto')
 fetch('js/resto.json')
@@ -11,8 +14,8 @@ fetch('js/resto.json')
 .then(data => {
   data.forEach(e=>{
     document.getElementById('restoList').innerHTML +=/*html*/`
-    <a href="./menu.html" class="restaurantes flex">
-      <div class="img">
+    <a id="${e.id}" href="./menu.html" class="restaurantes flex" onClick="guardar(id)">
+      <div class="img center">
         <img src="${e.img.src}" alt="${e.img.alt}" />
         <div class="distancia">${e.dist}</div>
       </div>

@@ -14,10 +14,10 @@ header{
     padding:0 160px 0 5%;
     position: relative;
     gap:5%;
-    h1.food-name{
+    h1#food-name{
       color:black;
     }
-    div.food-price{
+    #food-price{
       position: absolute;
       right: 5%;
       height:60px;

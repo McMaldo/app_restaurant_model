@@ -2,10 +2,7 @@ let num = document.getElementById("num");
 let btnRestar = document.getElementById("restar");
 let btnSumar = document.getElementById("sumar");
 let addToCart = document.querySelector(".food-addToCart");
-let price = document.querySelector(".food-price");
 let buySection = document.querySelector("footer.flex");
-let priceUnit = 7.99;
-price.innerText = `$ ${priceUnit}`;
 let cant = 1;
 num.innerText = cant;
 btnRestar.innerText = "block"
@@ -74,3 +71,18 @@ addToCart.addEventListener("click",()=>{
 // let restoList = document.getElementById("restoList");
 // let resto  = document.createElement("a");
 // resto.setAttribute('href','menu.html');
+fetch('js/resto.json')
+.then(response => response.json())
+.then(data => {
+  data.forEach(e=>{
+    if(e.id==localStorage.getItem("resto")){
+      e.menu.forEach(plato=>{
+        if(plato.id==localStorage.getItem("plato")){
+          document.getElementById('food-name').innerText=plato.name;
+          document.getElementById('food-price').innerText=plato.price;
+          document.querySelector('.food-desc').innerText=plato.desc;
+        }
+      })
+    }
+  })
+})

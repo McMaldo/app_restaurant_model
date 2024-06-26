@@ -1,17 +1,20 @@
+let options=document.getElementById('options');
+let guardarPlato=(id)=>{
+  localStorage.setItem("plato",id);
+}
 fetch('js/resto.json')
-//espero respuesta
-.then(response => {
-  //almacena los datos obtenidos convertidos a json
-  return response.json()
-})
-// cuando devuelve la conversión a un array de objetos podemos comenzar a utilizarlos.
-// utilizamos una variable, en ésta oportunidad ocupamos el nombre DATA
+.then(response => response.json())
 .then(data => {
   data.forEach(e=>{
-    if(e.id==1){
+    if(e.id==localStorage.getItem("resto")){
+      document.querySelector('#resto-name').innerText=e.name;
+    }
+  })
+  data.forEach(e=>{
+    if(e.id==localStorage.getItem("resto")){
       e.menu.forEach(m=>{
-        document.getElementById('options').innerHTML +=/*html*/`
-        <a href="./saucer.html" class="card flex">
+        options.innerHTML +=/*html*/`
+        <a id="${m.id}" href="./saucer.html" class="card flex" onclick="guardarPlato(id)">
           <div class="card-img">
             <div class="card-price">${m.price}</div>
           </div>

@@ -170,14 +170,11 @@ main{
         height: 100%;
         width: 40%;
         position: relative;
-        padding: 10px;
         object-fit:contain;
         overflow: hidden;
         img{
           position:absolute;
-          left:0;
-          top:0;
-          height:100%;
+          width:100%;
         }
         div.distancia{
           position: absolute;
